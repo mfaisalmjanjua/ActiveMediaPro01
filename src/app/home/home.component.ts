@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   }
 
   showDetail(id: number):void {
-    this.router.navigate(['/detail', id]);
+    // this.router.navigate(['/detail', id]);
+    this.router.navigateByUrl('/detail');
   }
 }
