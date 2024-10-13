@@ -1,0 +1,58 @@
+<div class="detailWrapper">
+  <div class="main">
+    <h2 class="handle">{{ data.handle }}</h2>
+    <h5 class="title">{{ data.name }}</h5>
+    <div class="stat">
+      <ul>
+        <li class="red">
+          {{ data.video }}
+          <label>Video Views</label>
+        </li>
+        <li class="blue">
+          {{ data.likes }}
+          <label>Likes</label>
+        </li>
+        <li class="blue">
+          {{ data.posts }}
+          <label>Total Posts</label>
+        </li>
+        <li class="red">
+          {{ data.comments }}
+          <label>Comments</label>
+        </li>
+        <li class="red">
+          {{ data.followers }}
+          <label>Followers</label>
+        </li>
+        <li class="blue">
+          {{ data.share }}
+          <label>Shares</label>
+        </li>
+      </ul>
+    </div>
+    <div class="videoCont">
+      <img src="./assets/thm1.png" alt="Thumbnail" class="thumbnail" (click)="openVideoModal()">
+
+      <img src="./assets/thm2.png" />
+    </div>
+  </div>
+</div>
+
+<div class="back">
+    <span class="home" (click)="back()">H</span>
+</div>
+
+<!-- Video Modal -->
+<div class="modal" #videoModal>
+  <div class="modal-content">
+    <video width="100%" controls autoplay [muted]="muted">
+        <source [src]="asset('vdo1.mp4')" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    <!-- <video width="100%" height="100%" autoplay controls (ended)="closeVideoModal()">
+      <source src="../../assets/vdo1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video> -->
+    <button class="close-button" (click)="closeVideoModal()">X</button>
+  </div>
+</div>
