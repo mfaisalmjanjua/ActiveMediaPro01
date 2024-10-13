@@ -13,3 +13,13 @@ node version : v18.19.1
 |:-----|:--------:|
 | ng   | 18.2.7 |
 | node   |  18.19.1  |
+
+
+
+// ng build
+// npx cap add android  (create android platform)
+
+// npx cap sync
+// npx cap open android  (open android project in android studio)
+// npx cap run android   (run android project)
+// npx cap build android  (build android project)
